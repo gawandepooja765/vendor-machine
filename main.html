@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+        <title>Vendor Machine!</title>
+
+        <style>
+            .machine {
+                margin: auto;
+                border-radius: 10px;
+                border: 1px solid #ececec;
+                background-color: #f8fafb;
+                box-shadow: 0 0 10px 0 #c6c8c9;
+            }
+            .head {
+                padding: 10px 0;
+                color: #f3365f;
+            }
+
+            .choclate-types .choclate input {
+                background: #fff1e8;
+                font-weight: 500;
+                color:  #f3365f;
+                border: none;
+                border-radius: 75%;
+                font-size: 15px;
+                padding: 10px;
+                border: 1px solid #f0a862;
+                /* margin: 10px; */
+                position: absolute;
+                top: -20px;
+                left: 43%;
+                margin: 7px 0;
+            }
+
+            .choclate-types .choclate {
+                border: 1px solid #ececec;
+                border-radius: 10px;
+                background: #fff;
+            }
+            .choclate-types .choclate .biscuit {
+                width: 350px;
+                height: 150px;
+            }
+            .choclate-types .choclate .details {
+                background: #f8fafb;
+            }
+
+            .choclate-types img {
+                width: 70px;
+
+                height: 50px;
+            }
+            .put-money {
+              padding: 50px;
+    border-radius: 5px;
+    margin: 0 10px;
+    border: 1px solid #4d85a4;
+}
+
+
+            
+            .put-money label {
+                font-size: 13px;
+                font-weight: 500;
+                margin-right: 5px;
+            }
+            .paymentBox {
+                width: 80px;
+                margin: 10px 0;
+                padding: 5px 15px;
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+            .take-from-here {
+                border-top: 1px solid #ececec;
+                background: #f8fafb;
+            }
+            #takeItem {
+                width: 350px;
+                height: 200px;
+                border: 1px solid #4d85a4;
+
+                background: #fff;
+                margin: auto;
+            }
+            .price {
+                 background: #eef9f0;
+    color: #4d735b;
+                border: 1px solid #dff1f1;
+                border-radius: 5px;
+                font-size: 12px;
+                padding: 2px 5px;
+                
+            }
+            .burger-name {
+                font-size: 18px;
+                font-weight: 500;
+            }
+            #errMsg {
+                font-size: 18px;
+                color: red;
+                padding: 10px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container my-4">
+            <div class="machine">
+                <h5 class="text-center head mb-0">Vendor Machine</h5>
+
+                <div class="choclate-types py-4 px-3">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 text-center">
+                                    <div class="choclate">
+                                        <div class="biscuit" id="oreo">
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                            <img src="images/oreo.webp" alt="oreo" />
+                                        </div>
+
+                                        <div class="border details py-1 position-relative">
+                                            <p class="burger-name mb-0 mt-4">Oreo</p>
+                                            <span class="mb-0 px-2 price"> 10 Rs </span>
+                                            <input type="button" value="Buy" class="push-btn" onclick="oreoFun()" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 text-center">
+                                    <div class="choclate">
+                                        <div class="biscuit" id="jimjam">
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                            <img src="images/jimjam.webp" alt="jimjam" />
+                                        </div>
+
+                                        <div class="border details py-1 position-relative">
+                                            <p class="burger-name mb-0 mt-4">Jim-Jam</p>
+                                            <span class="mb-0 px-2 price"> 20 Rs </span>
+                                            <input type="button" value="Buy" class="push-btn" onclick="jimjamFun()" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 text-center">
+                                    <div class="choclate">
+                                        <div class="biscuit" id="monaco">
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                            <img src="images/monaco.webp" alt="monaco" />
+                                        </div>
+                                        <div class="border details py-1 position-relative">
+                                            <p class="burger-name mb-0 mt-4">Monacco</p>
+                                            <span class="mb-0 px-2 price"> 40 Rs </span>
+                                            <input type="button" value="Buy" class="push-btn" onclick="monacoFun()" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 text-center">
+                                    <div class="choclate">
+                                        <div class="biscuit" id="bornBon">
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                            <img src="images/bornbon.png" alt="bornbon" />
+                                        </div>
+                                        <div class="border details py-1 position-relative">
+                                            <input type="button" value="Buy" onclick="bornBonFun()" />
+                                            <p class="burger-name mb-0 mt-4">Bornbon</p>
+                                            <span class="mb-0 px-2 price"> 50 Rs </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="text-center put-money">
+                                <label> Enter Money </label>
+                                <input type="number" class="paymentBox" id="payment" />
+                            </div>
+                             <div class="take-from-here text-center py-2">
+                    <h5 style="color: #f3365f;">Get your items from here</h5>
+                    <div id="takeItem" class="rounded-3 my-1">
+                        <h6 id="errMsg"></h6>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script src="script.js"></script>
+    </body>
+</html>
